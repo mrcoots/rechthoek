@@ -23,7 +23,14 @@ namespace rechthoek
                 var bla = Console.ReadKey();
                 if (bla.Key == ConsoleKey.LeftArrow)
                 {
-                    Console.WriteLine("Gelukt, de pijltjestoets links is ingedrukt");
+                    Console.Clear();
+                    curx = curx - 2;
+
+                    Console.SetCursorPosition(curx, cury);
+
+                    Console.WriteLine("┌┐");
+                    Console.SetCursorPosition(curx, cury - 1);
+                    Console.WriteLine("└┘");
                 }
                 else if (bla.Key == ConsoleKey.RightArrow)
                 {
@@ -38,14 +45,7 @@ namespace rechthoek
                 }
                 else
                 {
-                    Console.Clear();
-                    curx = curx - 2;
-
-                    Console.SetCursorPosition(curx, cury);
-
-                    Console.WriteLine("┌┐");
-                    Console.SetCursorPosition(curx, cury - 1);
-                    Console.WriteLine("└┘");
+                    Console.WriteLine("Helaas.. je drukt op wat anders");
                 }
             }
         }
