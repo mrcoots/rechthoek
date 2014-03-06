@@ -10,20 +10,42 @@ namespace rechthoek
     {
         public static void Main(string[] args)
         {
+            var toets = true;
+            var curx = Console.CursorLeft;
+            var cury = Console.CursorTop;
             Console.WriteLine("┌┐");
             Console.WriteLine("└┘");
-            var vraag = true;
-            while (vraag == true)
+
+
+
+            while (toets == true)
             {
                 var bla = Console.ReadKey();
-                Console.WriteLine(bla.Key.ToString());
                 if (bla.Key == ConsoleKey.LeftArrow)
                 {
                     Console.WriteLine("Gelukt, de pijltjestoets links is ingedrukt");
                 }
+                else if (bla.Key == ConsoleKey.RightArrow)
+                {
+                    Console.Clear();
+                    curx = curx + 2;
+
+                    Console.SetCursorPosition(curx, cury);
+                    
+                    Console.WriteLine("┌┐");
+                    Console.SetCursorPosition(curx, cury + 1);
+                    Console.WriteLine("└┘");
+                }
                 else
                 {
-                    Console.WriteLine("Helaas.. je drukt op wat anders");
+                    Console.Clear();
+                    curx = curx - 2;
+
+                    Console.SetCursorPosition(curx, cury);
+
+                    Console.WriteLine("┌┐");
+                    Console.SetCursorPosition(curx, cury - 1);
+                    Console.WriteLine("└┘");
                 }
             }
         }
