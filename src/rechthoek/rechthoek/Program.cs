@@ -27,9 +27,8 @@ namespace rechthoek
                     curx = curx - 2;
 
                     Console.SetCursorPosition(curx, cury);
-
                     Console.WriteLine("┌┐");
-                    Console.SetCursorPosition(curx, cury - 1);
+                    Console.SetCursorPosition(curx, cury + 1);
                     Console.WriteLine("└┘");
                 }
                 else if (bla.Key == ConsoleKey.RightArrow)
@@ -39,6 +38,28 @@ namespace rechthoek
 
                     Console.SetCursorPosition(curx, cury);
                     
+                    Console.WriteLine("┌┐");
+                    Console.SetCursorPosition(curx, cury + 1);
+                    Console.WriteLine("└┘");
+                }
+                else if (bla.Key == ConsoleKey.DownArrow)
+                {
+                    Console.Clear();
+                    cury = cury + 2;
+
+                    Console.SetCursorPosition(curx, cury);
+
+                    Console.WriteLine("┌┐");
+                    Console.SetCursorPosition(curx, cury +1);
+                    Console.WriteLine("└┘");
+                }
+                else if (bla.Key == ConsoleKey.UpArrow)
+                {
+                    Console.Clear();
+                    cury = cury - 2;
+
+                    Console.SetCursorPosition(curx, cury);
+
                     Console.WriteLine("┌┐");
                     Console.SetCursorPosition(curx, cury + 1);
                     Console.WriteLine("└┘");
